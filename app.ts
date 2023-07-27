@@ -1,12 +1,13 @@
-function add (n1: number, n2: number){
-    if (typeof n1 !== "number" || typeof n2 !== "number"){
-        throw new Error("no go bad types");
-    }
-    return n1 + n2;
-}
+const person: {
+    name: string;
+    age: number; 
+    hobbies: string[]; //array of strings
+    role: [number, string]; //tuple
+} = {
+    name: "Maximilian",
+    age: 30,
+    hobbies: ["Sports", "Cooking"],
+    role: [2, "author"]
+};
 
-const number1 = "789";
-const number2 = 2.8;
-
-const result = add(number1, number2);
-console.log(result);
+console.log(person.name);
