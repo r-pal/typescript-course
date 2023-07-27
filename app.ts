@@ -1,13 +1,13 @@
-const person: {
-    name: string;
-    age: number; 
-    hobbies: string[]; //array of strings
-    role: [number, string]; //tuple
-} = {
-    name: "Maximilian",
-    age: 30,
-    hobbies: ["Sports", "Cooking"],
-    role: [2, "author"]
-};
+function combine (n1: number | string, n2: number | string){
 
-console.log(person.name);
+let result
+    if (typeof n1 === "number" && typeof n2 === "number"){
+        result = n1 + n2;
+    }
+    return result;
+}
+
+const combinedAges = combine (30,36);
+console.log(combinedAges);
+
+const combinedNames = combine ("Max", "Anna");
