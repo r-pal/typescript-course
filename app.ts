@@ -1,18 +1,16 @@
-function add(n1: number, n2: number) {
-    return n1 + n2;
+let userInput: unknown;
+
+let userName: string;
+
+userInput = 5;
+userInput = "hello";
+if (typeof userInput === "string"){
+    userName = userInput;
 }
 
-function printResult(num: number): undefined {
-    console.log("Result: " + num);
-    return;
+function generateError(message: string, code: number): never {
+    // throw {message: message, errorCode: code};
+    while (true) {}
 }
 
-printResult(add(5, 12));
-
-let combineValues: Function;
-
-// combineValues = add;
-combineValues = printResult;
-
-console.log(combineValues(8,8))
-
+generateError("An error occurred!", 500);
